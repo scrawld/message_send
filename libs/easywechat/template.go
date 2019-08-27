@@ -8,8 +8,9 @@ package easywechat
 
 import (
 	"encoding/json"
-	"fcmp_message_sender/libs/utils"
 	"fmt"
+
+	"message_sender/libs/utils"
 )
 
 const (

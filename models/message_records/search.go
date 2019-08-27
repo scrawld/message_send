@@ -7,7 +7,7 @@
 package message_records
 
 import (
-	"fcmp_message_sender/models"
+	"message_sender/models"
 
 	"github.com/ant-libs-go/util"
 	"github.com/go-xorm/builder"

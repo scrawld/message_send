@@ -8,12 +8,13 @@ package work_handler
 
 import (
 	"encoding/json"
-	"fcmp_message_sender/libs/passport_server"
-	"fcmp_message_sender/libs/utils"
-	"fcmp_message_sender/models"
-	"fcmp_message_sender/models/message_records"
-	"fcmp_message_sender/models/message_task"
 	"strings"
+
+	"message_sender/libs/passport_server"
+	"message_sender/libs/utils"
+	"message_sender/models"
+	"message_sender/models/message_records"
+	"message_sender/models/message_task"
 
 	"github.com/ant-libs-go/util/logs"
 	uuid "github.com/satori/go.uuid"

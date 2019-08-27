@@ -12,7 +12,8 @@ import (
 	"os"
 	"time"
 
-	"fcmp_message_sender/libs/config"
+	"message_sender/libs/config"
+
 	"github.com/ant-libs-go/pool"
 	"github.com/satori/go.uuid"
 	"github.com/smallnest/rpcx/client"
@@ -36,7 +37,7 @@ var (
 
 func BuildCommonHeader() *common.Header {
 	return &common.Header{
-		Requester: fmt.Sprintf("fcmp_message_sender#%s", host),
+		Requester: fmt.Sprintf("message_sender#%s", host),
 		Sessid:    uuid.NewV4().String(),
 		Timestamp: time.Now().Unix(),
 		Version:   100,
@@ -45,7 +46,7 @@ func BuildCommonHeader() *common.Header {
 
 func BuildCommonHeaderWithToken(token string) *common.Header {
 	return &common.Header{
-		Requester: fmt.Sprintf("fcmp_message_sender#%s", host),
+		Requester: fmt.Sprintf("message_sender#%s", host),
 		Sessid:    uuid.NewV4().String(),
 		Timestamp: time.Now().Unix(),
 		Version:   100,

@@ -7,8 +7,9 @@
 package sendingerror
 
 import (
-	"fcmp_message_sender/models"
 	"fmt"
+
+	"message_sender/models"
 )
 
 type SendingError struct {
