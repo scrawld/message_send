@@ -1,0 +1,27 @@
+[basic]
+	debug = true
+	logFile = "conf/log.xml"
+[gc]
+	percent = 100
+[consul]
+	host = "127.0.0.1"
+	port = "8500"
+[rpc]
+	[rpc.passport_server]
+		node = "/fcmp_passport_server"
+[db]
+	[db.master]
+		host = "127.0.0.1"
+		port = "3306"
+		user = "root"
+		pawd = "123456"
+		name = "mini"
+	[db.slave]
+		host = "127.0.0.1"
+		port = "3306"
+		user = "root"
+		pawd = "123456"
+		name = "mini"
+[sender]
+	limit = 100
+	routine_num = 10

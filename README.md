@@ -1,2 +1,3 @@
-# message_send
-This is a tool for sending template messages offline
+# fcmp_message_sender
+
+模板消息推送服务

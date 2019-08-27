@@ -1,0 +1,21 @@
+CREATE TABLE `message_records` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `task_id` int(11) NOT NULL COMMENT '任务ID',
+  `media_id` int(11) NOT NULL COMMENT '媒体ID',
+  `user_id` int(11) NOT NULL COMMENT '用户ID',
+  `wx_openid` char(64) NOT NULL DEFAULT '' COMMENT '用户openid',
+  `template_id` char(64) NOT NULL DEFAULT '' COMMENT '模板ID',
+  `message` varchar(255) NOT NULL DEFAULT '' COMMENT 'Json 模板消息内容',
+  `action_path` char(64) NOT NULL DEFAULT '' COMMENT '跳转小程序路径',
+  `send_status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '发送状态,1:待发送 2:发送中 3:完成 4:失败',
+  `response` varchar(255) NOT NULL DEFAULT '' COMMENT '错误响应',
+  `is_retry` tinyint(1) NOT NULL DEFAULT '0' COMMENT '重试 0: 正常 1:需重试',
+  `retry_count` int(11) NOT NULL DEFAULT '0' COMMENT '重试计数',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '状态 0:正常 1:删除',
+  `created_at` int(11) NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `updated_at` int(11) NOT NULL DEFAULT '0' COMMENT '修改时间',
+  PRIMARY KEY (`id`),
+  KEY `task_id` (`task_id`),
+  KEY `is_retry` (`is_retry`),
+  KEY `send_status` (`send_status`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='模板消息内容表';
