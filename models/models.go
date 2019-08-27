@@ -9,9 +9,10 @@ package models
 
 import (
 	"encoding/gob"
-	"fcmp_message_sender/libs/config"
 	"fmt"
 	"time"
+
+	"message_sender/libs/config"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/go-xorm/xorm"

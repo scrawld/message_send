@@ -7,13 +7,13 @@
 package main
 
 import (
-	"fcmp_message_sender/libs/config"
-	"fcmp_message_sender/libs/loops"
-	"fcmp_message_sender/models"
-	"fcmp_message_sender/models/media"
-	"fcmp_message_sender/work_handler"
 	"flag"
 	"fmt"
+	"message_sender/libs/config"
+	"message_sender/libs/loops"
+	"message_sender/models"
+	"message_sender/models/media"
+	"message_sender/work_handler"
 	"os"
 	"os/signal"
 	"path"

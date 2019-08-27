@@ -7,8 +7,9 @@
 package message_task
 
 import (
-	"fcmp_message_sender/models"
 	"strings"
+
+	"message_sender/models"
 
 	"github.com/ant-libs-go/util"
 	"github.com/go-xorm/builder"

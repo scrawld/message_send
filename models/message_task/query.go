@@ -8,8 +8,9 @@ package message_task
 
 import (
 	"errors"
-	"fcmp_message_sender/models"
 	"time"
+
+	"message_sender/models"
 
 	"github.com/go-xorm/builder"
 	"gitlab.com/feichi/fcad_thrift/libs/go/enums"
