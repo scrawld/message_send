@@ -1,4 +1,4 @@
-module fcmp_message_sender
+module message_sender
 
 require (
 	github.com/ant-libs-go/pool v0.0.1

@@ -8,7 +8,8 @@ package message_records
 
 import (
 	"errors"
-	"fcmp_message_sender/models"
+
+	"message_sender/models"
 
 	"github.com/go-xorm/builder"
 	"gitlab.com/feichi/fcad_thrift/libs/go/enums"

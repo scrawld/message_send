@@ -7,9 +7,10 @@
 package media
 
 import (
-	"fcmp_message_sender/libs/passport_server"
 	"sync"
 	"time"
+
+	"message_sender/libs/passport_server"
 
 	"github.com/ant-libs-go/util/logs"
 	uuid "github.com/satori/go.uuid"

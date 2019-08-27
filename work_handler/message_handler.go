@@ -7,15 +7,16 @@
 package work_handler
 
 import (
-	"fcmp_message_sender/libs/config"
-	"fcmp_message_sender/libs/easywechat"
-	"fcmp_message_sender/libs/passport_server"
-	"fcmp_message_sender/libs/sendingerror"
-	"fcmp_message_sender/models"
-	"fcmp_message_sender/models/media"
-	"fcmp_message_sender/models/message_records"
 	"sync"
 	"time"
+
+	"message_sender/libs/config"
+	"message_sender/libs/easywechat"
+	"message_sender/libs/passport_server"
+	"message_sender/libs/sendingerror"
+	"message_sender/models"
+	"message_sender/models/media"
+	"message_sender/models/message_records"
 
 	"github.com/ant-libs-go/util/logs"
 	uuid "github.com/satori/go.uuid"
