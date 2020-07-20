@@ -25,25 +25,25 @@ var (
 )
 
 func Init() {
-	master, err := xorm.NewEngine("mysql", fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&autocommit=true",
-		config.Get().Db["master"].User,
-		config.Get().Db["master"].Pawd,
-		config.Get().Db["master"].Host,
-		config.Get().Db["master"].Port,
-		config.Get().Db["master"].Name))
+	main, err := xorm.NewEngine("mysql", fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&autocommit=true",
+		config.Get().Db["main"].User,
+		config.Get().Db["main"].Pawd,
+		config.Get().Db["main"].Host,
+		config.Get().Db["main"].Port,
+		config.Get().Db["main"].Name))
 	if err != nil {
-		panic(fmt.Sprintf("master db connect errr: %s", err))
+		panic(fmt.Sprintf("main db connect errr: %s", err))
 	}
-	slave, err := xorm.NewEngine("mysql", fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&autocommit=true",
-		config.Get().Db["slave"].User,
-		config.Get().Db["slave"].Pawd,
-		config.Get().Db["slave"].Host,
-		config.Get().Db["slave"].Port,
-		config.Get().Db["slave"].Name))
+	subordinate, err := xorm.NewEngine("mysql", fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&autocommit=true",
+		config.Get().Db["subordinate"].User,
+		config.Get().Db["subordinate"].Pawd,
+		config.Get().Db["subordinate"].Host,
+		config.Get().Db["subordinate"].Port,
+		config.Get().Db["subordinate"].Name))
 	if err != nil {
-		panic(fmt.Sprintf("slave db connect errr: %s", err))
+		panic(fmt.Sprintf("subordinate db connect errr: %s", err))
 	}
-	Orm, err = xorm.NewEngineGroup(master, []*xorm.Engine{slave})
+	Orm, err = xorm.NewEngineGroup(main, []*xorm.Engine{subordinate})
 	Orm.SetConnMaxLifetime(3000)
 
 	Orm.ShowSQL(config.Get().Basic.Debug)
